@@ -5,27 +5,20 @@ import React from "react"
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
+      background: `cyan`,
+      marginBottom: `0`,
+      marginTop: '0'
     }}
   >
     <div
       style={{
         margin: `0 auto`,
         maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        padding: `2%`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
+      <h1 style={{ margin: 0, color: 'black', textAlign: 'center' }}>
           {siteTitle}
-        </Link>
       </h1>
     </div>
   </header>
@@ -36,7 +29,7 @@ Header.propTypes = {
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+  siteTitle: `Jason Beneducci`,
 }
 
 export default Header

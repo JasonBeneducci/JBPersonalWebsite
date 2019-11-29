@@ -1,0 +1,36 @@
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    background-color: black;
+    height: 5vh;
+}
+
+.nav-component {
+    display: flex;
+    margin-top: 4%;
+    height: 3vh;
+    width: 100%;
+    border-style: solid;
+    border-color: cyan;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.nav-title {
+    font-size: 3vh;
+    color: black;
+}
+
+.logo-link {
+    height: 3vh;
+    width: auto;
+    margin: 1%;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}

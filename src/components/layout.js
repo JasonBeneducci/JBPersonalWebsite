@@ -8,9 +8,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
+import Nav from './Nav'
 import Header from "./header"
 import "./layout.css"
+import '../assets/App.css'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -26,6 +27,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
+      <Nav/>
       <div
         style={{
           margin: `0 auto`,
@@ -34,11 +36,17 @@ const Layout = ({ children }) => {
           paddingTop: 0,
         }}
       >
-        <main>{children}</main>
+        <main className="main">{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <a href="https://github.com/JasonBeneducci">
+            <img src="http://pngimg.com/uploads/github/github_PNG20.png" alt="" className="logo-link"/>
+          </a>
+          <a href="https://www.linkedin.com/in/jasonbeneducci/">
+            <img src="https://carlisletheacarlisletheatre.org/images/linkedin-icon-round-8.png" alt="" className="logo-link"/>
+          </a>
+          <a href="https://medium.com/@jasonbeneducci">
+            <img src="https://miro.medium.com/max/968/1*F6SrJR7_s95r6oCF3ugMZw.png" alt="" className="logo-link" />
+          </a>
         </footer>
       </div>
     </>
